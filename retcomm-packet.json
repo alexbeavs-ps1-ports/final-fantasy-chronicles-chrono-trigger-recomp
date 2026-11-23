@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "final-fantasy-chronicles-chrono-trigger-psx",
+  "name": "Final Fantasy Chronicles - Chrono Trigger",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "final-fantasy-chronicles-chrono-trigger-recomp",
+  "rom_identity": {
+    "crc32": [
+      "9be53306"
+    ],
+    "md5": [
+      "ea9a248a933657f72641eccb5b372413"
+    ],
+    "sha1": [
+      "d169c65f4d2ed543ac9bcb961e429c04a2674f28"
+    ],
+    "disc_serials": [
+      "SLUS-01363"
+    ],
+    "sizes": [
+      547484448
+    ],
+    "filenames": [
+      "Final Fantasy Chronicles - Chrono Trigger (USA) (Rev 1).cue",
+      "Final Fantasy Chronicles - Chrono Trigger (USA) (Rev 1).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "6c651f4363bcf4b76e82fdbe625e3be9a82b98a4459718a7ad5512d54057e60e"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/final-fantasy-chronicles-chrono-trigger-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "final-fantasy-chronicles-chrono-trigger-*-windows-x64.zip",
+      "linux-x64": "final-fantasy-chronicles-chrono-trigger-*-linux-x64.zip",
+      "macos-arm64": "final-fantasy-chronicles-chrono-trigger-*-macos-arm64.zip",
+      "macos-x64": "final-fantasy-chronicles-chrono-trigger-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "final_fantasy_chronicles_chrono_trigger.exe",
+    "linux": "final_fantasy_chronicles_chrono_trigger",
+    "macos": "final_fantasy_chronicles_chrono_trigger"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/final-fantasy-chronicles-chrono-trigger-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Final Fantasy Chronicles - Chrono Trigger",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "final-fantasy-chronicles-chrono-trigger-recomp",
+  "original": {
+    "region": "USA",
+    "serial": "SLUS-01363"
+  }
+}

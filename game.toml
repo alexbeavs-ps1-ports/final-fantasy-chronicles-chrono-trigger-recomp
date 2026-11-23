@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Final Fantasy Chronicles - Chrono Trigger"
+id = "SLUS-01363"
+players = 2
+exe = "disc/SLUS_013.63"
+disc = "disc/Final Fantasy Chronicles - Chrono Trigger (USA) (Rev 1).cue"
+discs = ["disc/Final Fantasy Chronicles - Chrono Trigger (USA) (Rev 1).cue"]
+disc_serials = ["SLUS-01363"]
+load_address = "0x80034500"
+entry_pc = "0x80035E98"
+text_size = "0x0002E800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Final Fantasy Chronicles - Chrono Trigger (USA) (Rev 1).bin"
+cue_name = "Final Fantasy Chronicles - Chrono Trigger (USA) (Rev 1).cue"
+boot_exe = "SLUS_013.63"
+known_sizes = [547484448]
+known_md5 = [
+  "ea9a248a933657f72641eccb5b372413",
+]
+known_sha1 = [
+  "d169c65f4d2ed543ac9bcb961e429c04a2674f28",
+]
+known_crc32 = [
+  "9be53306",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Final Fantasy Chronicles - Chrono Trigger Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "6c651f4363bcf4b76e82fdbe625e3be9a82b98a4459718a7ad5512d54057e60e"
